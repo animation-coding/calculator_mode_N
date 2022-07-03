@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root
+{
+    --bodybg:#e7e8ee;
+    --btt:#222222;
+    --tcolor: rgb(119 119 119);
+   
+    --BxSi:
+        6px 6px 8px rgba(13, 39, 80, 0.25),
+        -6px -6px 10px #fff,
+        inset -8px -8px 12px rgba(255,255,255,0.7),
+        inset 5px 5px 8px rgba(13,39,80,0.2);
+
+    --PSD-3d:
+        7px 7px 15px #45566754,
+        -8px -8px 15px #5165790a,
+         inset -5px -4px 13px 0px #51657959,
+         inset 6px 7px 12px 0px #fffffff0; 
+
+    --eql-background: 
+    linear-gradient(to bottom right, rgb(211 109 18),rgb(237 157 30));
+    --eql-shadow: 
+    inset 1px 1px 3px rgb(249 133 0),
+    inset 4px 4px 15px rgb(179 83 0),
+    inset -1px -1px 3px rgb(204 99 8),
+    3px 3px 5px rgb(194 199 212);
+   
+    --c-background: linear-gradient(to bottom right, rgb(139 148 161),rgb(239 240 247));
+    --c-shadow: 
+    inset 1px 1px 1px rgb(200 206 217), 
+    inset 2px 2px 8px rgb(202 207 214), 
+    inset -2px -2px 3px rgb(180 187 199), 
+    3px 3px 12px rgb(194 199 212);
+ 
+    --num-background: 
+    linear-gradient(to bottom right, rgb(192 197 209),rgb(237 238 245));
+    --num-shadow: 
+    inset 2px 2px 3px rgb(235 235 243), 
+    inset 4px 4px 15px rgb(202 207 214), 
+    3px 3px 12px rgb(194 199 212);
+
+}
+
+body.dark{
+ 
+  
+    --bodybg:#1e212a;
+    --btt:#fff;
+    --tcolor: rgb(119 119 119);
+   
+    --BxSi:6px 6px 8px rgb(0 0 0 / 50%),
+        -6px -6px 10px rgb(255 255 255 / 5%),
+         inset -8px -8px 12px rgb(255 255 255 / 5%),
+          inset 5px 5px 8px rgb(0 0 0 / 50%);
+
+    --PSD-3d:5px 5px 15px
+ 
+    rgb(0 0 0 / 18%), 5px 15px 15px rgb(0 0 0 / 25%), inset 5px 5px 10px rgb(0 0 0 / 50%), inset 5px 5px 20px rgb(255 255 255 / 20%), inset -5px -5px 15px rgb(0 0 0 / 75%); 
+
+
+        --eql-shadow: inset 1px 1px 2px rgb(249 170 45 / 60%), inset 4px 4px 15px rgb(165 78 4), 3px 3px 5px rgb(24 27 36);
+    --eql-shadow: inset 1px 1px 2px rgb(249 170 45 / 60%), inset 4px 4px 15px rgb(165 78 4), 3px 3px 5px rgb(24 27 36);
+   
+    --c-background: linear-gradient(to bottom right, rgb(73 79 92),rgb(111 117 135));
+    --c-shadow: inset 1px 1px 1px rgb(101 107 123), inset 4px 4px 15px rgb(51 57 66), 3px 3px 5px rgb(24 27 36);
+   
+    --num-background: linear-gradient(to bottom right, rgb(41 45 56),rgb(60 60 68));
+    --num-shadow: inset 1px 1px 1px rgb(57 60 74), inset 4px 4px 15px rgb(32 35 45), 3px 3px 5px rgb(24 27 36);
+
+}
+
+/***  ***/
+* 
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+body
+{
+    background:var(--bodybg);
+}
+.iphone-x
+{
+    margin-top: 100px;
+}
+.iphone-x .screen
+{
+    width: 42%;
+    height: 640px;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 320px;
+    border-radius: 44px;
+    background: var(--bodybg);
+    padding: 10px;
+    box-shadow:var(--PSD-3d);
+}
+.screen .notch
+{
+    width: 159px;
+    height: 30px;
+    margin: 0px auto;
+   /* background: #e8eaece1;*/
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius:15px ;
+}
+.sound
+{
+    top: 10px;
+    left: 54px;
+    width: 40px;
+    height: 6px;
+    position: relative;
+    background: var(--btt);
+    border-radius: 10px;
+}
+.camera
+{
+    top: 2px;
+    left: 110px;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    background: var(--btt);
+    border-radius: 100px;
+}
+.time
+{
+    color: var(--btt);
+
+    width: 60px;
+    font-size: 11px;
+    margin-top: -22px;
+    background: transparent;
+    margin-left: 18px;
+}
+.battery
+{
+    margin-top:-20px;
+}
+.battery i
+{
+    color: var(--btt);
+    
+    margin-left: 230px !important;
+}
+.wifi
+{
+    margin-top: -22px !important;
+    margin-left: 260px;
+}
+.wifi i
+{
+    color: var(--btt);
+    margin-top: -20px;
+}
+.top-nav
+{
+    width: 100%;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background: transparent;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.area
+{
+    min-width: 50% !important;
+    width: 93% !important;
+    min-height: 120px !important;
+    margin-left: -5px;
+    margin-top: -5px;
+    font-size: 30px !important;
+    text-align: center;
+    text-align: right;
+    overflow: scroll;
+    outline: none;
+    border: none;
+    font-weight: 400;
+    color:var(--btt);
+    background:var(--bodybg);
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow:var(--BxSi);
+
+}
+.calculator
+{
+    margin: 0;
+    box-sizing: content-box;
+}
+.key
+{
+    float:  left !important;
+    font-size: 15pt;
+    display: flex !important;
+    margin: -5%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.first-col,
+.second-col,
+.third-col,
+.fourth-col,
+.fifth-col
+{
+    padding: 10px;
+    white-space: wrap;
+    margin: -9.5px;
+    display: inline-block;
+    margin-top: 20px !important;
+    justify-content: space-between !important;
+}
+.button
+{
+    display: block;
+    padding-left: 40px;
+    min-height: 40px;
+    padding-right: 30px;
+    white-space: wrap;
+    word-wrap: break-word;
+    margin-top: 20px;
+    justify-content: space-between !important;
+}
+button
+{
+    position: relative;
+    margin-left: -54px !important;
+    min-width: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+    color: var(--btt) !important;
+    border: none !important;
+    border-radius: 17px !important;
+    height: 50px;
+    outline: none;
+    font-weight: 400 !important;
+    font-size: 14pt !important;
+}
+.btn-work
+{
+    color:var(--btt) !important;
+}
+.btn-equal
+{
+    color:var(--btt) !important;
+    height: 120px !important;
+}
+button:focus
+{
+    cursor: pointer;
+    outline: none !important;
+    border: none !important;
+
+}
+button:active
+{
+    outline: none !important;
+    border: none !important;
+}
+button:hover
+{
+    color: #696a6a !important;
+}
+.btn-work:hover,
+.btn-equal:hover
+{
+    color:#0b254e !important;
+}
+.home
+{
+    margin-top: 392px;
+    margin-left: 72px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--btt);
+}
+.menu
+{
+    margin-top: 400px;
+    margin-left: -275px;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--btt);
+}
+.back
+{
+    margin-top: 400px;
+    margin-left: 75px;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--btt);
+}
+#eql
+{
+    background: var(--eql-background);
+    box-shadow: var(--eql-shadow);
+    color: #fff !important;
+}
+
+#c
+{
+    background: var(--c-background);
+    box-shadow: var(--c-shadow);
+}
+
+#num
+{
+    background: var(--num-background);
+    box-shadow: var(--num-shadow);
+}
+
+
+.drak-light
+{
+  left: 50px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 50px;
+  width: 60px;
+  height: 60px;
+  background: var(--num-background);
+  box-shadow: var(--num-shadow);
+  border-radius: 50%;
+}
+.drak-light i
+{
+  position: absolute;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease
+}
+.drak-light i.sun
+{
+  opacity: 0;
+  pointer-events: none;
+}
+.drak-light.active i.sun
+{
+  opacity: 1;
+  pointer-events: auto;
+}
+.drak-light.active i.moon
+{
+  pointer-events: none;
+  opacity: 0;
+}
+.bx-sun
+{
+    color: #ffd900;
+}
+.bx-moon
+{
+    color: #888;
+}

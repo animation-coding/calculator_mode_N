@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator UI -Neumorphism</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="iphone-x">
+            <div class="screen">
+                <div class="notch">
+                    <div class="sound"></div>
+                    <div class="camera"></div>
+                </div>
+                <div class="time" id="time">
+                    <script>
+                        var time = document.getElementById('time').innerHTML;
+                        var today = new Date();
+                        var time = today.getHours() + ":" + today.getMinutes();
+                        time = document.write(time)
+                    </script>
+                </div>
+                <div class="battery">
+                    <i class="fa fa-battery-full"></i>
+                </div>
+                <div class="wifi">
+                    <i class="fa fa-wifi"></i>
+                </div>
+
+
+                <form class="calculator container">
+                    <input type="text" placeholder="0" name="displayResult" class="area" />
+
+                    <div class="key container" id="keyBoard">
+
+                        <div class="first-col"></div>
+
+                        <div class="second-col">
+                            <div class="button">
+                                <button type="button" name="" value="AC" class="btn-work"
+                                    onclick="displayResult.value=' '" id="c">
+                                    AC
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="7" onclick="calcNumbers(this.value)" id="num">
+                                    7
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="4" onclick="calcNumbers(this.value)" id="num">
+                                    4
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="1" onclick="calcNumbers(this.value)" id="num">
+                                    1
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="0" onclick="calcNumbers(this.value)" id="num">
+                                    0
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="third-col">
+                            <div class="button">
+                                <button type="button" name="" value="+/-" class="btn-work"
+                                    onclick="makeNegative(displayResult.value)" id="c">
+                                    +/-
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="8" onclick="calcNumbers(this.value)" id="num">
+                                    8
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="5" onclick="calcNumbers(this.value)" id="num">
+                                    5
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="2" onclick="calcNumbers(this.value)" id="num">
+                                    2
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="." onclick="calcNumbers(this.value)" id="num">
+                                    .
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="fourth-col">
+                            <div class="button">
+                                <button type="button" name="" value="%" class="btn-work"
+                                    onclick="calcNumbers(this.value)" id="c">
+                                    <i class="fa fa-percent"></i>
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="9" onclick="calcNumbers(this.value)" id="num">
+                                    9
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="6" onclick="calcNumbers(this.value)" id="num">
+                                    6
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="3" onclick="calcNumbers(this.value)" id="num">
+                                    3
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="+" onclick="calcNumbers(this.value)"
+                                    class="btn-work" id="num">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="fifth-col">
+                            <div class="button">
+                                <button type="button" name="" value="/" onclick="calcNumbers(this.value)"
+                                    class="btn-work" id="eql">
+                                    <i class="fa fa-divide"></i>
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="*" onclick="calcNumbers(this.value)"
+                                    class="btn-work" id="eql">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="button">
+                                <button type="button" name="" value="-" onclick="calcNumbers(this.value)"
+                                    class="btn-work" id="eql">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+
+                            <div class="button">
+                                <button type="button" name="" value="="
+                                    onclick="(displayResult.value.includes('%'))?percentage(displayResult.value):displayResult.value=eval(displayResult.value);"
+                                    class="btn-equal" id="eql">
+                                    =
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="menu"><i class="bx bx-menu-alt-left"></i></div>
+                        <div class="home"><i class="bx bx-home-alt-2"></i></div>
+                        <div class="back"><i class="bx bx-arrow-back"></i></div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="drak-light">
+        <i class="bx bx-moon moon"></i>
+        <i class="bx bx-sun sun"></i>
+    </div>
+    <script src="assets/js.js"></script>
+</body>
+
+</html>
